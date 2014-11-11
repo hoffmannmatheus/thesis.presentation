@@ -1,3 +1,16 @@
+My Thesis Presentation Model
+============================
+
+Huge thanks to [impress.js](http://github.com/bartaz/impress.js/) for an awesome presentation 
+framework. I've made some css & html customizations for this model.
+
+Hope this can be useful!
+
+
+Original README:
+----------------
+
+
 impress.js
 ============
 
