@@ -1,6 +1,9 @@
 My Thesis Presentation Model
 ============================
 
+To see the presentation,
+[click here](http://hoffmannmatheus.github.io/thesis.presentation/).
+
 Huge thanks to [impress.js](http://github.com/bartaz/impress.js/) for an awesome presentation 
 framework. I've made some css & html customizations for this model.
 
