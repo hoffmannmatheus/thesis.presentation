@@ -238,55 +238,70 @@ a:focus {
 .frame {
     width: 900px;
     height: 340px;
-    border: 3px solid rgba(0, 0, 0, .3);
-    border-color:#999;
+    background-color: rgba(180, 180, 180, 0.8);
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
     padding: 0;
-    margin:0;
+    margin: 0;
 }
 .frame div.frame_title {
+    font-family: 'Ubuntu', georgia, serif;
+    font-size: 48px;
+    font-weight: 300;
+    text-shadow: 4px 4px 16px rgba(0, 0, 0, .9) !important;
+    line-height: 1.5;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     text-align: center;
     vertical-align: center;
-    width: 895px;
+    width: 900px;
     margin: 0 0 0 0px;
-    padding: 0 0 12px 0;
+    padding: 7px 0 12px 0;
     background-color:#999;
     color: #FFF;
     text-shadow: 0 2px 2px rgba(100, 100, 100, .1);
 }
 
 .frame.sumary1 {
-    border-color:#AD1914;
 }
 
 .frame.sumary1 div.frame_title {
-    background-color:#AD1914;
+    background-color:#00963F;
 }
 
 .frame.sumary2 {
-    border-color:#01478F;
     height: 650px;
 }
 
 .frame.sumary2 div.frame_title {
-    background-color:#01478F;
+    background-color:#DA251C;
 }
 
 .frame.sumary3 {
-    border-color:#00923D;
 }
 
 .frame.sumary3 div.frame_title {
-    background-color:#00923D;
+    background-color:#01478F;
 }
 
 .frame.sumary4 {
-    border-color:#D6BD00;
 }
 
 .frame.sumary4 div.frame_title {
-    background-color:#D6BD00;
+    background-color:#FEE300;
 }
 
+.frame.final {
+    background-color: rgba(180, 180, 180, 0.9);
+}
+
+div.frame p {
+    font-family: 'Play', georgia, serif;
+    color: #01478f;
+    background-color: rgba(255, 255, 255, .8);
+    text-align: center;
+}
 
 
 /*
