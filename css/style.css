@@ -29,10 +29,16 @@ body {
     line-height: 1;
 }
 ol, ul {
-    list-style: none;
+    /*list-style: none;*/
+    margin: 30px 0 30px 0;
+    list-style-image: url('../images/check.png');
+}
+li {
+    padding-left: 15px;
+    margin-bottom: 10px;
 }
 blockquote, q {
-    quotes: none;
+    /*quotes: none;*/
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
@@ -78,8 +84,8 @@ a {
     color: inherit;
     text-decoration: none;
     padding: 0 0.1em;
-    background: rgba(255,255,255,0.5);
-    text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
+    /*background: rgba(255,255,255,0.5);*/
+    /*text-shadow: -1px -1px 2px rgba(100,100,100,0.9);*/
     border-radius: 0.2em;
 
     -webkit-transition: 0.5s;
@@ -159,21 +165,34 @@ a:focus {
     text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
 
     font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 30px;
-    line-height: 36px;
+    font-size: 40px;
+    line-height: 46px;
     letter-spacing: -1px;
-}
 
-.slide p {
-    text-align: center;
-    /*margin: auto;*/
-    font-size: 25px;
-    line-height: 30px;
+}
+.slide::after {
+    content: "";
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
 }
 
 .slide img {
     margin: 0 auto 20px auto;
     display: block;
+}
+
+.slide .round_border {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
 }
 
 .slide div.highlight_blue {
@@ -197,6 +216,18 @@ a:focus {
     border-bottom: 1px solid rgba(0, 0, 0, .25);
 }
 
+.slide div.title {
+    text-align: center;
+    vertical-align: center;
+    display: block;
+    font-size: 60px;
+    line-height: 70px;
+    margin-top: 30px;
+    margin-bottom: 35px;
+    color: rgb(90, 90, 90);
+    text-shadow: 1px 2px 2px rgba(100, 100, 100, .4);
+}
+
 .slide h1 {
     text-align: center;
     vertical-align: center;
@@ -207,14 +238,12 @@ a:focus {
 
 .slide p {
     text-align: center;
-    margin-top:30px;
     font-size: 40px;
-    line-height: 30px;
+    line-height: 50px;
 }
 
 .slide div.highlight_gray.author p{
     text-align: center;
-    margin: auto;
     font-size: 55px;
     line-height: 60px;
     display: block;
@@ -224,16 +253,37 @@ a:focus {
     font-size: 30px;
 }
 
-.slide q {
+.slide div.quote {
+    color: rgb(80, 80, 80);
+    background-color: #eee;
+    text-align: center;
+    padding:10px;
     display: block;
-    font-size: 50px;
-    line-height: 72px;
-    margin-top: 100px;
+    font-size: 40px;
+    line-height: 56px;
+    font-family: Lato, sans-serif;
+    font-style: italic;
+}
+
+.slide div.refs {
+    text-align: right;
+    width:90%;
+    margin-left:10%;
+    font-size: 20px;
+    line-height: 26px;
 }
 
 .slide q strong {
     white-space: nowrap;
 }
+
+.slide p.link {
+    font-family: 'Play', georgia, serif;
+    color: #01478f;
+    /*background-color: rgba(255, 255, 255, .8);*/
+    text-align: center;
+}
+     
 
 .frame {
     width: 900px;
@@ -244,6 +294,20 @@ a:focus {
     box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
     padding: 0;
     margin: 0;
+}
+
+.frame p.eaZy {
+    float: right;
+    opacity: 0.3;
+    color: rgb(4, 36, 41);
+    background-color:  rgba(180, 180, 180, 0.0);
+    text-align: center;
+    padding:10px;
+    display: block;
+    margin: 68px 50px;
+    font-size: 60px;
+    line-height: 56px;
+    font-family: Lato, sans-serif;
 }
 .frame div.frame_title {
     font-family: 'Ubuntu', georgia, serif;
@@ -303,69 +367,6 @@ div.frame p {
     text-align: center;
 }
 
-
-/*
-    And now we start to style each step separately.
-
-    First is the title step with a big <h1> (no room for padding) and some
-    3D positioning along Z axis.
-*/
-
-#title {
-    background-position: top center;
-    background-repeat: no-repeat;
-    padding: 0;
-}
-
-#title .try {
-    font-size: 64px;
-    position: absolute;
-    top: -0.5em;
-    left: 1.5em;
-
-    -webkit-transform: translateZ(20px);
-    -moz-transform:    translateZ(20px);
-    -ms-transform:     translateZ(20px);
-    -o-transform:      translateZ(20px);
-    transform:         translateZ(20px);
-}
-
-#title h1 {
-    -webkit-transform: translateZ(50px);
-    -moz-transform:    translateZ(50px);
-    -ms-transform:     translateZ(50px);
-    -o-transform:      translateZ(50px);
-    transform:         translateZ(50px);
-}
-
-#title .footnote {
-    font-size: 32px;
-}
-
-
-/*
-    There is nothing really special about 'use the source, Luke' step, too,
-    except maybe of the Yoda background.
-
-    As you can see below I've 'hard-coded' it in data URL.
-    That's not the best way to serve images, but because that's just this one
-    I decided it will be OK to have it this way.
-
-    Just make sure you don't blindly copy this approach.
-*/
-#source {
-    width: 700px;
-    padding-bottom: 300px;
-
-    /* Yoda Icon :: Pixel Art from Star Wars http://www.pixeljoint.com/pixelart/1423.htm */
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAMAAACwUBm+AAAAAXNSR0IArs4c6QAAAKtQTFRFsAAAvbWSLUUrLEQqY1s8UYJMqJ1vNTEgOiIdIzYhjIFVLhsXZ6lgSEIsP2U8JhcCVzMsSXZEgXdOO145XJdWOl03LzAYMk4vSXNExr+hwcuxRTs1Qmk+RW9Am49eFRANQz4pUoNMQWc+OSMDTz0wLBsCNVMxa2NBOyUDUoNNSnlEWo9VRGxAVzYFl6tXCggHbLNmMUIcHhwTXkk5f3VNRT8wUT8xAAAACQocRBWFFwAAAAF0Uk5TAEDm2GYAAAPCSURBVHja7d3JctNAFIZRMwRCCGEmzPM8z/D+T8bu/ptbXXJFdij5fMt2Wuo+2UgqxVmtttq5WVotLzBgwIABAwYMGDCn0qVqbo69psPqVpWx+1XG5iaavF8wYMCAAQMGDBgwi4DJ6Y6qkxB1HNlcN3a92gbR5P2CAQMGDBgwYMCAWSxMlrU+UY5yu2l9okfV4bAxUVbf7TJnAwMGDBgwYMCAAbMLMHeqbGR82Zy+VR1Ht81nVca6R+UdTLaU24Ruzd3qM/e4yjnAgAEDBgwYMGDA7AJMd1l/3NRdVGcj3eX/2WEhCmDGxnM7yqygu8XIPjJj8iN/MGDAgAEDBgwYMAuDGb8q0RGlLCHLv1t9qDKWn3vdNHVuEI6HPaxO9Jo3GDBgwIABAwYMmIXBdC9ShGgMk+XnkXUeuGcsP/e1+lhNnZsL/G5Vs3OAAQMGDBgwYMCAWSxMR3SzOmraG5atdy9wZKzb+vg16qyqe2FltbnAgAEDBgwYMGDALAxmTJSuN3WA76rnVca6GTnemGN1WoEBAwYMGDBgwIBZGMxUomy4+xO899V4LAg5Xnc2MGDAgAEDBgwYMGA218Wq+2K1LDqvY9xZu8zN8fICdM6btYABAwYMGDBgwIABMzfH0+pGU5afze2tXebmeAfVz+p8BQYMGDBgwIABAwbMPBzZ+oWmfJrln1273FhkbHzee9WWbw7AgAEDBgwYMGDALAKm43hcdctKgblcPamOhuXnXlY5Xs6bsW4FGyQCAwYMGDBgwIABswiYMceZKgvMo+h8mrHLTdn676rj+FEFoTtHd8MwOxEYMGDAgAEDBgyYRcBM5UhXqiymW3R3c9ARhWO/OmjqfjVZy+xEYMCAAQMGDBgwYBYG073OnCV0RFNhMhaOa9WfKmOB6XjHMN1tQmaAAQMGDBgwYMCA2VWY7vXjz1U4croAzgPztwIDBgwYMGDAgAEDZhswh035NBw59Dww3RgYMGDAgAEDBgwYMJuD6f4tXT7NUqfCdBvZLkxXdgQGDBgwYMCAAQNmt2DGj8WzwAfV/w7T/aq7mxwwYMCAAQMGDBgwuwqTOo7uTwTngflSzQ3TdaJvAwEDBgwYMGDAgAED5gSvgbyo5oHZ4Pc+gwEDBgwYMGDAgAEzhOm+5G0qTGaAAQMGDBgwYMCAAXNaMOcnls3tNwWm+zRzp54NDBgwYMCAAQMGDJh5YNL36k1TLuGvVq+qnKMbS5n7tulT9asCAwYMGDBgwIABA2ZumKuztLnjgQEDBgwYMGDAgNl5mH/4/ltKA6vBNAAAAABJRU5ErkJggg==);
-    background-position: bottom right;
-    background-repeat: no-repeat;
-}
-
-#source q {
-    font-size: 60px;
-}
 
 /*
     The last step is an overview.

@@ -418,6 +418,8 @@
         // used to reset timeout for `impress:stepenter` event
         var stepEnterTimeout = null;
         
+        var elementToDeactivate = null; 
+
         // `goto` API function that moves to step given with `el` parameter (by index, id or element),
         // with a transition `duration` optionally given as second parameter.
         var goto = function ( el, duration ) {
@@ -438,9 +440,17 @@
             window.scrollTo(0, 0);
             
             var step = stepsData["impress-" + el.id];
+            if(elementToDeactivate) {
+                elementToDeactivate.classList.remove("active");
+                elementToDeactivate = null;
+            }
             
             if ( activeStep ) {
-                activeStep.classList.remove("active");
+                if (!el.classList.contains("zoom")) {
+                    activeStep.classList.remove("active");
+                } else {
+                    elementToDeactivate = activeStep;
+                }
                 body.classList.remove("impress-on-" + activeStep.id);
             }
             el.classList.add("active");

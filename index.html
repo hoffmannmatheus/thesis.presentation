@@ -9,6 +9,7 @@
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300italic' rel='stylesheet' type='text/css'>
 
     <link href="css/style.css" rel="stylesheet" />
     
@@ -26,9 +27,9 @@
         <div class="highlight_blue"><h1>Sistema de Automação Residencial Baseado em Raspberry Pi </br> e Open
         ZWave</h1></div>
         </br>
-        </br>
         <div class="highlight_gray author"><p>Matheus Hoffmann Silva</p></div>
-        <p><span class="orientador">Orientador:</span> Prof. Dr. João Cândido Dovicchi</p>
+        </br>
+        <span class="orientador">Orientador:</span> Prof. Dr. João Cândido Dovicchi
     </div>
 
 
@@ -41,33 +42,69 @@
 
     <!-- SUMARY - PART 1 -->
     <div class="step frame sumary1" data-x="1500" data-y="-2700" data-scale="5">
-        <div class="frame_title">Introdução e Embasamento Teórico</div>
+        <div class="frame_title">Introdução</div>
     </div>
 
     <!-- PART 1 - SLIDE 1 --> 
     <div class="step slide" data-x="0" data-y="-2500" data-scale="1">
-        <q>Don't you think that presentations given <strong>in modern browsers</strong> shouldn't <strong>copy the limits</strong> of 'classic' slide decks?</q>
+		<div class='title'>Tema</div>
+        <br>
+		<p>Desenvolver um sistema de <br>Automação Residencial:</p>
+        <ul style="margin:60px 0 0 270px">
+		<li>Código Aberto</li>
+		<li>Simplicidade</li>
+		<li>Baixo Custo</li>
+        </ul>
     </div>
 
     <!-- PART 1 - SLIDE 2 -->
     <div class="step slide" data-x="1000" data-y="-2500" data-scale="1">
-        <span class="try">then you should try</span>
-        <h1>impress.js<sup>*</sup></h1>
-        <span class="footnote"><sup>*</sup> no rhyme intended</span>
+		<div class='title'>Motivação</div>
+        <ul style="margin:60px 0 0 90px">
+		<li>Interesse na área.</li>
+		<li>Soluções existentes insatisfatórias.</li>
+		<li>Compatibilidade com Linux e hardware embarcado.</li>
+        </ul>
+        <br>
+        <img style="opacity:0.65;" src="images/light.png" />
     </div>
 
     <!-- PART 1 - SLIDE 3 -->
     <div class="step slide" data-x="2000" data-y="-2500" data-scale="1">
-        <span class="try">then you should try</span>
-        <h1>impress.js<sup>*</sup></h1>
-        <span class="footnote"><sup>*</sup> no rhyme intended</span>
+        <div class='title'h1>Definição</div>
+
+        <img style="opacity:0.65; margin-left:90%; height:10%;"
+        src="images/update.png" />
+
+        <div class="quote">
+        &ldquo;Sistema que remove tanta interação quanto possível e desejável de tarefas domésticas.&rdquo;
+        </div>
+        <br>
+        <br>
+
+        <div class="refs">DENNIS, Andrew K. <b>What home automation is</b>. In: DENNIS, Andrew K. Raspberry Pi
+         Home Automation with Arduino. Birmingham: Packt Publising, 2013. p. 17-19.</div>
     </div>
 
     <!-- PART 1 - SLIDE 4 -->
     <div class="step slide" data-x="3000" data-y="-2500" data-scale="1">
-        <span class="try">then you should try</span>
-        <h1>impress.js<sup>*</sup></h1>
-        <span class="footnote"><sup>*</sup> no rhyme intended</span>
+		<div class='title'>Breve Histórico</div>
+
+        <div style="float:left">
+            <br>
+            <p>1966 - ECHO IV</p>
+            <br>
+            <img class="round_border" style="height:300px;"
+            src="images/echoIV.jpg" />
+        </div>
+        <div style="float:right">
+            <br>
+            <p>1969 - H316</p>
+            <br>
+            <img class="round_border"  style="height:300px;"
+            src="images/h316.jpg" />
+        </div>
+
     </div>
 
 
@@ -79,72 +116,150 @@
 
     <!-- PART 2 - SLIDE 1 --> 
     <div class="step slide" data-x="0" data-y="-200" data-scale="1">
-        <q>Don't you think that presentations given <strong>in modern browsers</strong> shouldn't <strong>copy the limits</strong> of 'classic' slide decks?</q>
+		<div class='title'>Visão Geral</div>
+		<p>Sistema para fornecer informações e controle do ambiente domiciliar.</p>
+        <ul style="margin-left: 160px">
+		<li>Facilidade de Configuração.</li>
+		<li>Flexibilidade.</li>
+		<li>Criação de Cenários.</li>
+        </ul>
+    </div>
+    <!-- PART 2 - SLIDE 1 - ZOOM --> 
+    <div class="step" data-x="20" data-y="20" data-z="40" data-rotate-x="5" data-scale="0.4">
+        <img src="images/eaZyOverview.png"
+        style="height:450px;margin-left:-200px; background-color:#fff; border-radius: 10px;border: 1px solid rgba(0, 0, 0, .3);"/>
     </div>
 
     <!-- PART 2 - SLIDE 2 -->
     <div class="step slide" data-x="1000" data-y="-200" data-scale="1">
-        <span class="try">then you should try</span>
-        <h1>impress.js<sup>*</sup></h1>
-        <span class="footnote"><sup>*</sup> no rhyme intended</span>
+		<div class='title'>Arquitetura</div>
+        <img src="images/eaZyArchitectureV3.png" />
     </div>
 
     <!-- PART 2 - SLIDE 3 -->
     <div class="step slide" data-x="2000" data-y="-200" data-scale="1">
-        <span class="try">then you should try</span>
-        <h1>impress.js<sup>*</sup></h1>
-        <span class="footnote"><sup>*</sup> no rhyme intended</span>
+		<div class='title'>Comunicação por Barramento</div>
+        <ul style="margin-left: 60px">
+		<li>Comunicação entre os componentes.</li>
+		<li>Linguagens diferentes.</li>
+		<li>Mais de uma implementação por componente.</li>
+        </ul>
+        <img src="images/zmq.gif" style="margin-left: 450px; margin-top: 100px; height: 50px"/>
+    </div>
+    <!-- PART 2 - SLIDE 3 - ZOOM --> 
+    <div class="step zoom" data-x="1850" data-y="35" data-z="0" data-rotate-x="0" data-scale="0.3">
+        <img src="images/ComunicacaoPorBarramento.png"
+        style="margin-left:-70px; height: 600px;background-color:#fff; border-radius: 10px;border: 1px solid rgba(0, 0, 0, .3);"/>
     </div>
 
     <!-- PART 2 - SLIDE 4 -->
     <div class="step slide" data-x="3000" data-y="-200" data-scale="1">
-        <span class="try">then you should try</span>
-        <h1>impress.js<sup>*</sup></h1>
-        <span class="footnote"><sup>*</sup> no rhyme intended</span>
+		<div class='title'>Home Stack</div>
+        <ul style="margin-left: 110px">
+		<li>Lógica de Automação Residencial.</li>
+		<li>Gerenciamento de Cenários.</li>
+		<li>Persistência de dados.</li>
+        </ul>
+        <img src="images/lua.gif" style="float:left; margin: 40px 0 0 100px; height: 200px"/>
+        <img src="images/sqlite.gif" style="float:right;margin: 90px 100px 0 0; height: 100px"/>
     </div>
+
+    <!-- PART 2 - SLIDE 5 --> 
+    <div class="step slide" data-x="0" data-y="1000" data-scale="1">
+		<div class='title'>Device Controller</div>
+        <ul style="margin-left: 160px">
+		<li>Interface entre o sistema e os dispositivos reais.</li>
+		<li>Transmite comandos.</li>
+		<li>Recebe atualizações.</li>
+        </ul>
+        <img src="images/python.png" style="float:left; margin: 40px 0 0 100px; height: 200px"/>
+        <img src="images/openzwave.png" style="float:right;margin: 40px 50px 0 0; height: 200px"/>
+    </div>
+
+    <!-- PART 2 - SLIDE 6 --> 
+    <div class="step slide" data-x="1000" data-y="1000" data-scale="1">
+		<div class='title'>eaZy Web</div>
+        <ul style="margin-left: 160px">
+		<li>Interface de usuário.</li>
+		<li>Interação com dispositivos.</li>
+		<li>Definir cenários.</li>
+		<li>Alertas.</li>
+        </ul>
+        <img src="images/nodejs.png" style="float:left; margin: 40px 0 0 0px; height: 120px"/>
+        <img src="images/angularjs.png" style="float:right;margin: 60px 30px 0 0; height: 90px"/>
+    </div>
+
+    <!-- PART 2 - SLIDE 7 --> 
+    <div class="step slide" data-x="2000" data-y="1000" data-scale="1">
+		<div class='title'>Hardware Utilizado</div>
+        <div style="margin:auto;width:650px">
+            <div style="float:left">
+                <img class="round_border" style="width:300px;"
+                src="images/RaspberryPi_picture.jpg" />
+                <img class="round_border" style="width:300px;"
+                src="images/Appliance_picture.jpg" />
+            </div>
+            <div style="float:right">
+                <img class="round_border" style="width:250px;"
+                src="images/ZStick_picture.jpg" />
+                <img class="round_border" style="height:238px;"
+                src="images/Multisensor_picture.jpg" />
+            </div>
+        </div>
+    </div>
+
 
 
 
     <!-- SUMARY - PART 3 -->
     <div class="step frame sumary3" data-x="6500" data-y="-2700" data-scale="5">
-        <div class="frame_title"> Parte 3</div>
+        <div class="frame_title">Demonstração</div>
+        <img style="float:right;position:relative;margin:45px 50px 0 0;opacity:0.15;height:130px"
+        src="images/scene.png" />
     </div>
 
     <!-- PART 3 - SLIDE 1 --> 
     <div class="step slide" data-x="5000" data-y="-2500" data-scale="1">
-        <q>Don't you think that presentations given <strong>in modern browsers</strong> shouldn't <strong>copy the limits</strong> of 'classic' slide decks?</q>
+		<div class='title'>Demonstração</div>
+        <br>
+        <br>
+        <br>
+        <div class="highlight_gray">
+        <p class='link'><a href="http://eazy.local:3000">http://eazy.local:3000</a></p>
+        </div>
+        <br>
+        <img style="opacity:0.85;height:200px" src="images/demo.png" />
     </div>
-
-    <!-- PART 3 - SLIDE 2 -->
-    <div class="step slide" data-x="6000" data-y="-2500" data-scale="1">
-        <span class="try">then you should try</span>
-        <h1>impress.js<sup>*</sup></h1>
-        <span class="footnote"><sup>*</sup> no rhyme intended</span>
-    </div>
-
 
 
     <!-- SUMARY - PART 4 -->
     <div class="step frame sumary4" data-x="6500" data-y="-580" data-scale="5">
-        <div class="frame_title">Discussão e Conclusões</div>
+        <div class="frame_title">Conclusão</div>
     </div>
 
     <!-- PART 4 - SLIDE 1 --> 
     <div class="step slide" data-x="5000" data-y="-400" data-scale="1">
-        <q>Don't you think that presentations given <strong>in modern browsers</strong> shouldn't <strong>copy the limits</strong> of 'classic' slide decks?</q>
+		<div class='title'>Conclusão</div>
+
+        <ul style="margin-left: 180px;">
+		<li>Estudo sobre <br>Automação Residencial.</li>
+		<li>Concepção de um projeto.</li>
+		<li>Sistema implementado.</li>
+        </ul>
+        <br>
+        <img style="opacity:0.45;height:150px;" src="images/house.png" />
     </div>
 
     <!-- PART 4 - SLIDE 2 -->
     <div class="step slide" data-x="6000" data-y="-400" data-scale="1">
-        <span class="try">then you should try</span>
-        <h1>impress.js<sup>*</sup></h1>
-        <span class="footnote"><sup>*</sup> no rhyme intended</span>
+		<div class='title'>Trabalhos Futuros</div>
+        <ul style="margin-left:60px;margin-top:10px;font-size: 35px;list-style: circle;">
+			<li><b>Segurança</b>:<br>controle acesso à interface;<br>registro de eventos.</li>
+			<li><b>Componente de Estatísticas</b>:<br>geração de estatísticas de consumo e utilização dos dispositivos.</li>
+			<li><b>Aprimoramentos na Interface</b>:<br> aprimoramentos visuais.</li>
+        </ul>
     </div>
 
-
-    <!-- OVERVIEW -->
-    <div id="overview" class="step" data-x="4000" data-y="-700" data-scale="8">
-    </div>
 
     <!-- FINAL SLIDE -->
     <div class="step frame final" data-x="8000" data-y="-580" data-z="5000" data-scale="5"
@@ -153,6 +268,11 @@
         <div class="frame_title">So long, and thanks for all the fish!</div>
         <br>
         <p>github.com/hoffmannmatheus/eaZy</p>
+        <img style="display:block; opacity:0.85;height:100px;margin:3px auto 0 auto;" src="images/github.gif" />
+    </div>
+
+    <!-- OVERVIEW -->
+    <div id="overview" class="step" data-x="4000" data-y="-700" data-scale="8">
     </div>
 
     <div class="hint">
